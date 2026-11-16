@@ -34,3 +34,30 @@
  footer{height:auto;min-height:50px;margin:0 5%;padding:13px 0 calc(13px + env(safe-area-inset-bottom));font-size:7px}footer span:nth-child(2){display:none}
 }
 @media(max-width:390px){.intro{padding-top:18px}.map-wrap{height:33dvh;min-height:225px}.search-wrap{margin:10px 10px 8px}.place-item{min-height:70px;padding:8px 10px}.detail-image-wrap{height:clamp(102px,15dvh,140px)}.detail-content{padding-left:14px;padding-right:14px}}
+
+
+/* Largerger, clearer type for Vietnamese and English readers */
+:root{--serif:'Lora',Georgia,serif;--sans:'Be Vietnam Pro',Arial,sans-serif}
+body{font-size:16px;line-height:1.55}
+.brand{font-size:13px}.stay-label{font-size:11px;letter-spacing:1.1px}.lang-switch{font-size:13px}
+.eyebrow{font-size:11px;letter-spacing:1.35px}.intro p{font-size:15px;line-height:1.65}
+.weather-note b{font-size:10px}.weather-note small{font-size:13px}
+.search-wrap input{font-size:14px}.search-wrap input::placeholder{font-size:14px}
+.filter-btn{font-size:12px;padding:7px 10px}.list-head{font-size:11px}.sort-row{font-size:10px}.sort-row select{font-size:12px}
+.place-copy h3{font-size:15px}.place-copy p{font-size:12px}.category-label{font-size:9px}.distance{font-size:11px}.sidebar-foot{font-size:11px}
+.map-caption{font-size:10px;letter-spacing:.8px}.leaflet-control-attribution{font-size:11px!important}
+.detail-category{font-size:10px}.detail-time{font-size:11px}.detail-content h2{font-size:25px}
+.detail-address{font-size:13px;line-height:1.55}.detail-desc{font-size:14px;line-height:1.65}
+.fact-label{font-size:10px;letter-spacing:.65px}.fact-value{font-size:13px;line-height:1.5}.fit-chip{font-size:11px}
+.note{font-size:12px;line-height:1.6}.directions{font-size:12px;letter-spacing:.7px}
+footer{font-size:10px;letter-spacing:.7px}
+@media(max-width:760px){
+ body{font-size:16px}.intro p{font-size:15px}.search-wrap input{font-size:16px}
+ .filter-btn{font-size:12px}.list-head{font-size:11px}
+ .place-copy h3{font-size:16px}.place-copy p{font-size:12px}.category-label{font-size:9px}.distance{font-size:11px}.sidebar-foot{font-size:11px}
+ .detail-category{font-size:10px}.detail-time{font-size:12px}.detail-content h2{font-size:clamp(26px,7vw,31px)}
+ .detail-address{font-size:14px;line-height:1.55}.detail-desc{font-size:15px;line-height:1.65}
+ .fact-label{font-size:10px}.fact-value{font-size:14px;line-height:1.5}.fit-chip{font-size:12px}
+ .note{font-size:13px;line-height:1.6}.directions{font-size:13px}.map-caption{font-size:9px}
+}
+@media(max-width:390px){.intro h1{font-size:34px}.intro p{font-size:14px}.place-copy h3{font-size:15px}.detail-desc{font-size:14px}}
