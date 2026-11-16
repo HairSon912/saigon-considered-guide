@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f7f3" />
+  <meta name="description" content="A thoughtful local guide to Ho Chi Minh City, curated for guests around Võ Thị Sáu." />
+  <title>Saigon, considered — a local guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Saigon, considered home"><span class="brand-mark">S</span><span>SAIGON, <i>CONSIDERED</i></span></a>
+    <div class="topbar-right"><span class="stay-label"><span class="stay-dot"></span><span data-i18n="yourStay">YOUR STAY, LOCALLY</span></span><button class="lang-switch" id="langSwitch" aria-label="Switch language">EN <span>·</span> VI</button></div>
+  </header>
+  <main>
+    <section class="intro"><div class="eyebrow"><span data-i18n="eyebrow">A NEIGHBOURHOOD GUIDE</span><span class="eyebrow-line"></span><span>HO CHI MINH CITY</span></div>
+      <div class="intro-row"><div><h1 data-i18n="headline">The city, <em>your way.</em></h1><p data-i18n="subhead">A considered guide to the places that make Saigon unforgettable — starting just around the corner.</p></div><div class="weather-note"><span class="sun-icon">☼</span><span><b data-i18n="curated">CURATED FOR YOU</b><small data-i18n="nearby">Near Võ Thị Sáu, Xuân Hòa</small></span></div></div>
+    </section>
+    <section class="explore" aria-label="Explore places"><div class="sidebar">
+      <div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input id="search" type="search" placeholder="Find a place…" data-i18n-placeholder="search" autocomplete="off"><kbd>⌘ K</kbd></div>
+      <div class="filters" id="filters"></div>
+      <div class="list-head"><span data-i18n="nearYou">PLACES NEAR YOU</span><span id="resultCount">10</span></div>
+      <div class="sort-row"><label for="sortBy" data-i18n="sortLabel">SORT</label><select id="sortBy" aria-label="Sort places"><option value="distance" data-i18n="sortDistance">Distance</option><option value="price" data-i18n="sortPrice">Price</option></select></div>
+      <div class="place-list" id="placeList"></div>
+      <div class="sidebar-foot"><span class="leaflet-dot"></span><span data-i18n="mapCredit">Map data © OpenStreetMap contributors</span></div>
+    </div>
+    <div class="map-wrap"><div id="map" aria-label="Interactive map of Ho Chi Minh City attractions"></div><div id="mapError" class="map-error" role="status" hidden><strong data-i18n="mapErrorTitle">Map tiles are blocked</strong><span data-i18n="mapErrorText">Open this page through the local server or a public HTTPS link to load the map.</span><code>outputs\run-local.bat</code></div><div class="map-controls"><button id="locate" class="map-control" title="Show my location" aria-label="Show my location"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg></button><button id="zoomIn" class="map-control" aria-label="Zoom in">+</button><button id="zoomOut" class="map-control" aria-label="Zoom out">−</button></div><div class="map-caption"><span class="map-caption-dot"></span><span data-i18n="mapCaption">YOUR NEIGHBOURHOOD, WELL EXPLORED</span></div>
+      <article id="detail" class="detail-card" aria-live="polite"></article>
+    </div></section>
+  </main>
+  <footer><span>SAIGON, CONSIDERED</span><span data-i18n="footer">A little closer to the city. Made for curious guests.</span><span>HO CHI MINH CITY · VIETNAM</span></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
